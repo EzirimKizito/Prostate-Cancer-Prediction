@@ -20,7 +20,7 @@ def main():
 
     st.markdown("#### PROJECT WORK BY: Ajala Tamilore Ayomitomiwa")
     
-    st.subheader("**Input the required features for diagnosis prediction:**")
+    st.subheader("**####Input the required features for diagnosis prediction:**")
 
     # Input fields for features
     radius = st.number_input('Radius', min_value=9.0, max_value=25.0, value=16.85)
