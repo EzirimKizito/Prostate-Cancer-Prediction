@@ -20,13 +20,13 @@ def main():
     st.subheader("Input the required features for diagnosis prediction:")
 
     # Input fields for features
-    radius = st.number_input('Radius', min_value=9.0, max_value=25.0, value=16.85)
+    radius = st.number_input('Radius', min_value=9.0, max_value=25.0, value=15.85)
     texture = st.number_input('Texture', min_value=11.0, max_value=27.0, value=18.23)
-    perimeter = st.number_input('Perimeter', min_value=52.0, max_value=172.0, value=96.78)
-    area = st.number_input('Area', min_value=202.0, max_value=1878.0, value=702.88)
+    perimeter = st.number_input('Perimeter', min_value=52.0, max_value=172.0, value=80.78)
+    area = st.number_input('Area', min_value=202.0, max_value=1878.0, value=670.88)
     smoothness = st.number_input('Smoothness', min_value=0.07, max_value=0.143, value=0.10273)
-    compactness = st.number_input('Compactness', min_value=0.038, max_value=0.345, value=0.12670)
-    symmetry = st.number_input('Symmetry', min_value=0.135, max_value=0.304, value=0.19317)
+    compactness = st.number_input('Compactness', min_value=0.038, max_value=0.345, value=0.11670)
+    symmetry = st.number_input('Symmetry', min_value=0.135, max_value=0.304, value=0.17317)
     fractal_dimension = st.number_input('Fractal Dimension', min_value=0.053, max_value=0.097, value=0.06469)
 
     # Button to make prediction
@@ -60,7 +60,7 @@ def main():
                     {'range': [75, 100], 'color': 'green'}],
                 'threshold': {
                     'line': {'color': "red", 'width': 4},
-                    'thickness': 0.75,
+                    'thickness': 0.90,
                     'value': max_proba}
             }))
         st.plotly_chart(fig, use_container_width=True)
