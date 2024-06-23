@@ -5,11 +5,11 @@ import joblib
 import plotly.graph_objects as go
 
 # Load your pre-trained model and transformers
-@st.experimental_singleton
+@st.cache_data()
 def load_resources():
-    model = joblib.load('/content/Prostate_cancer_rf_model.joblib')
-    scaler = joblib.load('/content/min_max_scaler.pkl')
-    label_encoders = joblib.load('/content/label_encoders.pkl')
+    model = joblib.load('Prostate_cancer_rf_model.joblib')
+    scaler = joblib.load('min_max_scaler.pkl')
+    label_encoders = joblib.load('label_encoders.pkl')
     return model, scaler, label_encoders
 
 model, scaler, label_encoders = load_resources()
